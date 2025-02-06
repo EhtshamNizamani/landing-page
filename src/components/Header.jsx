@@ -1,84 +1,82 @@
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import logo from "../assets/logo.png";
-import { navItems } from "../constants";
+import { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import logo from '../assets/logo.png';
+import { navItems } from '../constants';
 function Header() {
-  const [isMenu, setIsMenu] = useState(false)
+  const [isMenu, setIsMenu] = useState(false);
   const toggleNavbar = () => {
     setIsMenu(!isMenu);
   };
 
   return (
-    <div>
-
-    <div
-      className="flex lg:text-sm mt-0 z-5 py-2 bg-neutral-600  backdrop-blur-lg justify-between border-b
-border-neutral-700/80"
-    >
-      <div className="flex justify-center flex-shrink-0 items-center">
-        <img className="h-10 w-10 p-2 " src={logo} alt="Logo" />
-        <span>VirtualR</span>
-      </div>
-      <ul className="hidden lg:flex justify-center items-center space-x-10">
-        {navItems.map((item) => (
-          <li key={item.label}>
-            <a className="hover:text-gray-800" href={item.href}>
-              {" "}
-              {item.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-        <div className=" hidden lg:flex justify-center space-x-12 items-center pr-2">
-          <a href="#" className="py-2 px-3 border rounded-md">
+    <nav>
+      <div className="z-5 mt-0 flex justify-between border-b border-neutral-700/80  py-2 backdrop-blur-lg lg:text-sm">
+        <div className="flex flex-shrink-0 items-center justify-center">
+          <img className="h-10 w-10 p-2" src={logo} alt="Logo" />
+          <span>VirtualR</span>
+        </div>
+        <ul className="hidden items-center justify-center space-x-10 lg:flex">
+          {navItems.map((item) => (
+            <li key={item.label}>
+              <a className="hover:text-gray-800" href={item.href}>
+                {' '}
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div className="hidden items-center justify-center space-x-12 pr-2 lg:flex">
+          <a href="#" className="rounded-md border px-3 py-2">
             Sign In
           </a>
           <a
             href="#"
-            className="py-2 px-3 rounded-md bg-gradient-to-r from-orange-500 to-orange-800"
+            className="rounded-md bg-gradient-to-r from-orange-500 to-orange-800 px-3 py-2"
           >
             Create an account
           </a>
         </div>
-<div className="lg:hidden flex justify-center items-center text-xl pr-2">
-  <button onClick={toggleNavbar}>
-        {isMenu?<X/>:<Menu/>}
-  </button>
-</div>
-
+        <div className="flex items-center justify-center pr-2 text-xl lg:hidden">
+          <button onClick={toggleNavbar}>{isMenu ? <X /> : <Menu />}</button>
+        </div>
       </div>
       {isMenu && (
-  <div
-    className={`bg-neutral-900 flex flex-col justify-center items-center transition-all duration-700 ease-in-out transform max-h-[500px] overflow-hidden ${
-      isMenu ? "opacity-100 scale-100" : "opacity-0 scale-95"
-    }`}
-  >
-    <div>
-      <ul className="lg:hidden flex flex-col justify-center items-center space-y-4">
-        {navItems.map((item, index) => (
-          <li key={item.label} className="opacity-100 animate-fadeIn" >
-            <a className="hover:text-gray-500 transition-opacity duration-700" href={item.href}>
-              {item.label}
+        <div
+          className={`flex max-h-[500px] transform flex-col items-center justify-center overflow-hidden bg-neutral-900 transition-all duration-700 ease-in-out ${
+            isMenu ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
+          }`}
+        >
+          <div>
+            <ul className="flex flex-col items-center justify-center space-y-4 lg:hidden">
+              {navItems.map((item, index) => (
+                <li key={item.label} className="animate-fadeIn opacity-100">
+                  <a
+                    className="transition-opacity duration-700 hover:text-gray-500"
+                    href={item.href}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="mt-2 flex w-full items-center justify-center space-x-6 p-12 lg:hidden">
+            <a
+              href="#"
+              className="rounded-md border px-2 py-1 transition-all delay-200 duration-500"
+            >
+              Sign In
             </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-    <div className="lg:hidden w-full p-12 flex justify-center space-x-6 items-center mt-2">
-      <a href="#" className="py-1 px-2 border rounded-md transition-all duration-500 delay-200">
-        Sign In
-      </a>
-      <a
-        href="#"
-        className="bg-gradient-to-r from-orange-500 to-orange-800 py-1 px-2 rounded-md transition-all duration-500 delay-300"
-      >
-        Create an account
-      </a>
-    </div>
-  </div>
-)}
-
-    </div>
+            <a
+              href="#"
+              className="rounded-md bg-gradient-to-r from-orange-500 to-orange-800 px-2 py-1 transition-all delay-300 duration-500"
+            >
+              Create an account
+            </a>
+          </div>
+        </div>
+      )}
+    </nav>
   );
 }
 
