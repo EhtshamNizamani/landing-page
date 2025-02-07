@@ -2,6 +2,8 @@ import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import FeatureSection from "./components/FeatureSection";
 import Workflow from "./components/Workflow";
+import Pricing from "./components/Pricing";
+
 export default function App() {
   return (
     <>
@@ -11,6 +13,7 @@ export default function App() {
     <HeroSection/>
     <FeatureSection/>
     <Workflow/>
+    <Pricing/>
     </div>
  </>
   )

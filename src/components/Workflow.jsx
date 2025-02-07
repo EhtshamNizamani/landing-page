@@ -9,8 +9,8 @@ function Workflow() {
                 <h1>Acelerate your coding workflow</h1>
             </div>
             <div className=" mt-6 md:flex lg:mt-20">
-                <div >
-                    <img className=" rounded-sm  w-1/2  sm:w-full" src={codeImg} alt="Code img" />
+                <div className="  w-full rounded-sm ">
+                    <img  src={codeImg} alt="Code img" />
                 </div>
                 <div className="flex justify-start items-start flex-col mt-5  w-full">
 
