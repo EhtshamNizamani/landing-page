@@ -33,6 +33,8 @@ function Pricing() {
     </div>
 
     {option.features.map((feature,index)=>(
+        
+
         <div key={index} className="flex gap-2 text-sm mt-6">
             <div>
                 <CheckCircle2/>

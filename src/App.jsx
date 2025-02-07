@@ -4,6 +4,7 @@ import FeatureSection from "./components/FeatureSection";
 import Workflow from "./components/Workflow";
 import Pricing from "./components/Pricing";
 import Testimonials from "./components/Testimonials";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
     <Workflow/>
     <Pricing/>
     <Testimonials/>
+    <Footer/>
     
     </div>
  </>

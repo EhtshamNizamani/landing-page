@@ -20,12 +20,10 @@ function Testimonials() {
                                 <div className=" ml-3 ">
                                     <div className="text-gray-300" >
                                         <h1>
-
-                                        {item.user}
+                                            {item.user}
                                         </h1>
                                     </div>
                                     <div className="text-neutral-600" >
-
                                         {item.company}
                                     </div>
                                 </div>
