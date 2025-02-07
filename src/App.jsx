@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import FeatureSection from "./components/FeatureSection";
 import Workflow from "./components/Workflow";
 import Pricing from "./components/Pricing";
+import Testimonials from "./components/Testimonials";
 
 export default function App() {
   return (
@@ -14,6 +15,8 @@ export default function App() {
     <FeatureSection/>
     <Workflow/>
     <Pricing/>
+    <Testimonials/>
+    
     </div>
  </>
   )
