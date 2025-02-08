@@ -3,13 +3,13 @@ import { pricingOptions } from "../constants";
 
 function Pricing() {
   return (
-    <div className="lg:mt-20 mt-6">
+    <section id="pricing" className="lg:mt-20 mt-6">
         <div className="text-3xl md:text-5xl  text-center">
 
         <h2>Pricing</h2>
         </div>
 
-    <div className=" lg:flex lg:mt-10 mt-6 justify-between items-center ">
+    <div className=" lg:flex lg:mt-20 mt-6 justify-between items-center ">
        {pricingOptions.map((option,index)=>(
  <div key={index} className="mb-4 border border-neutral-500 rounded-md md:mx-4 w-full p-8 ">
     <div className=" flex justify-center items-center gap-2">
@@ -44,13 +44,13 @@ function Pricing() {
             </div>
         </div>
     ))}
-       <div className="border border-orange-500 w-full py-1 px-2 text-center mt-20 m-auto rounded-md cursor-pointer hover:border-white transition duration-500"> Subscribe</div>
+       <div className="border border-orange-500 w-full py-1 px-2 text-center mt-20 m-auto rounded-md cursor-pointer hover:border-white transition duration-300"> Subscribe</div>
 
  </div>
        ))}
 
     </div>
-    </div>
+    </section>
 
   )
 }

@@ -22,7 +22,7 @@ function HeroSection() {
         <div className="rounded-md border bg-gradient-to-r from-orange-500 to-orange-800 px-3 py-2 text-lg">
           <a href="#">Start for free</a>
         </div>
-        <div className="rounded-md border px-3 py-2 text-lg">
+        <div className="rounded-md border px-3 py-2 text-lg hover:border-orange-500 transition duration-300">
           <a href="#">Documention</a>
         </div>
       </div>

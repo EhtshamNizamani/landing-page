@@ -2,14 +2,14 @@ import { testimonials } from "../constants";
 
 function Testimonials() {
     return (
-        <div className="lg:mt-20 mt-6">
+        <section id="testimonials" className="lg:mt-20 mt-6">
             <div className="text-3xl md:text-5xl  text-center">
                 <h2>What people are saying</h2>
             </div>
 
             <div className=" grid grid-cols-1 mt-8 lg:mt-20 place-items-center lg:grid-cols-3 md:grid-cols-2 ">
                 {testimonials.map((item) => (
-                    <div className="bg-neutral-900 m-2 p-4 rounded-sm ">
+                    <div className="bg-neutral-900 hover:bg-neutral-800 hover:scale-105 hover:rounded-md duration-500 m-2 p-4 rounded-md ">
                         <p>
 
                             {item.text}
@@ -36,7 +36,7 @@ function Testimonials() {
 
             </div>
 
-        </div>
+        </section>
     )
 }
 

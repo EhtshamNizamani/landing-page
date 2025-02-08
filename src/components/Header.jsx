@@ -18,15 +18,15 @@ function Header() {
       <ul className="hidden lg:flex items-center justify-center space-x-10">
         {navItems.map((item) => (
           <li key={item.label}>
-            <a className="hover:text-gray-400" href={item.href}>
+            <a className="hover:text-orange-500 duration-300" href={item.href}>
               {item.label}
             </a>
           </li>
         ))}
       </ul>
       <div className="hidden lg:flex items-center justify-center space-x-12 pr-2">
-        <a href="#" className="rounded-md border px-3 py-2">Sign In</a>
-        <a href="#" className="rounded-md bg-gradient-to-r from-orange-500 to-orange-800 px-3 py-2">
+        <a href="#" className="rounded-md border px-3 py-2 hover:border-orange-500 transition duration-300">Sign In</a>
+        <a href="#" className="rounded-md border bg-gradient-to-r from-orange-500 to-orange-800 px-3 py-2">
           Create an account
         </a>
       </div>
@@ -38,7 +38,7 @@ function Header() {
       {isMenu && (
         <div
           className={`flex max-h-[500px] transform flex-col items-center justify-center overflow-hidden transition-all duration-700 ease-in-out ${
-            isMenu ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
+            isMenu ? 'scale-100 opacity-100 ' : 'scale-95 opacity-0 '
           }`}
         >
           <div>
@@ -46,7 +46,7 @@ function Header() {
               {navItems.map((item, index) => (
                 <li key={item.label} className="animate-fadeIn opacity-100">
                   <a
-                    className="transition-opacity duration-700 hover:text-gray-500"
+                    className=" hover:text-orange-500 duration-300"
                     href={item.href}
                   >
                     {item.label}
@@ -58,13 +58,13 @@ function Header() {
           <div className="mt-2 px-8 flex w-full items-center justify-center space-x-6 p-12 lg:hidden">
             <a
               href="#"
-              className="rounded-md border px-2 py-1 transition-all delay-200 duration-500"
+              className="rounded-md border px-2 py-1 hover:border-orange-500 transition duration-300"
             >
               Sign In
             </a>
             <a
               href="#"
-              className="rounded-md bg-gradient-to-r from-orange-500 to-orange-800 px-2 py-1 transition-all delay-300 duration-500"
+              className="rounded-md border bg-gradient-to-r from-orange-500 to-orange-800 px-2 py-1 transition-all delay-300 duration-500"
             >
               Create an account
             </a>

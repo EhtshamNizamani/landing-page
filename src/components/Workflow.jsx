@@ -4,7 +4,7 @@ import { checklistItems } from "../constants";
 
 function Workflow() {
     return (
-        <div>
+        <section id="workflow">
             <div className="mt-20 text-center text-5xl">
                 <h1>Acelerate your coding workflow</h1>
             </div>
@@ -37,7 +37,7 @@ function Workflow() {
                 </div>
 
             </div>
-        </div>
+        </section>
     )
 }
 
